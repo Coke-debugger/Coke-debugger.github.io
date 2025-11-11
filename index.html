@@ -99,14 +99,23 @@
             color: #2575fc;
         }
         
+        /* 修改这里：让关于我内容居中 */
         .about-content {
             display: flex;
-            align-items: center;
-            gap: 30px;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            text-align: center;      /* 文本居中 */
         }
         
         .about-text {
             flex: 1;
+            max-width: 800px;        /* 限制最大宽度，避免文字过长 */
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         .skills-container {
@@ -238,10 +247,9 @@
     <!-- 头部区域 -->
     <header>
         <div class="container">
-            <!-- 你可以替换下面的图片URL为你自己的头像 -->
-            <img src="微信图片_20251111185942_102_127.jpg" alt="个人头像" class="profile-img">
+            <img src="微信图片_20251111185942_102_127" alt="个人头像" class="profile-img">
             <h1>张三</h1>
-            <p class="tagline">前端开发者 | UI设计师 | 技术爱好者</p>
+            <p class="tagline">中国科学技术大学 | 人工智能专业 | 在读本科生</p>
         </div>
     </header>
     
@@ -274,11 +282,49 @@
         <!-- 技能部分 -->
         <section id="skills">
             <h2 class="section-title">我的技能</h2>
-           
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>正在学习</h3>
+                    <p>Python编程, 机器学习基础, 数据结构与算法</p>
+                </div>
+                <div class="skill-card">
+                    <h3>计划学习</h3>
+                    <p>深度学习, 计算机视觉, 自然语言处理</p>
+                </div>
+                <div class="skill-card">
+                    <h3>其他兴趣</h3>
+                    <p>开源项目, 技术博客, 学术研究</p>
+                </div>
+            </div>
         </section>
         
         <!-- 项目部分 -->
-       
+        <section id="projects">
+            <h2 class="section-title">我的项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">项目筹备中</div>
+                    <div class="project-info">
+                        <h3>第一个AI项目</h3>
+                        <p>正在规划中，期待用所学知识创造有价值的产品</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">项目筹备中</div>
+                    <div class="project-info">
+                        <h3>学术研究</h3>
+                        <p>参与实验室项目，探索人工智能前沿技术</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">项目筹备中</div>
+                    <div class="project-info">
+                        <h3>技术博客</h3>
+                        <p>记录学习过程，分享技术心得</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- 联系表单 -->
         <section id="contact">
@@ -305,12 +351,11 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <!-- 替换为你的社交媒体链接 -->
                 <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
+                <a href="#">知乎</a>
+                <a href="#">CSDN</a>
             </div>
-            <p>&copy; 2023 张三. 保留所有权利.</p>
+            <p>&copy; 2023 中国科学技术大学 张三. 保留所有权利.</p>
         </div>
     </footer>
 
